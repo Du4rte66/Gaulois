@@ -27,17 +27,14 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 	
-	public void boirePotion(int forcePotion) {
-		this.effetPotion = forcePotion;
-		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
-	}
-
-	@Override
-	public String toString() {
-		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+//	}
 
 	public static void main(String[] args) {
-		//TODO créer un main permettant de tester la classe Gaulois
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		
+		System.out.println(asterix);
 	}
 }
