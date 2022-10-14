@@ -19,8 +19,11 @@ public class Scenario {
 
 		asterix.direBonjour();
 		minus.voirGaulois();
-		while (!minus.simuleCoup(asterix.getForce() / 3)) {
-			// System.out.println(minus.simuleCoup(asterix.getForce()/3));
+//		System.out.println(asterix.getForce());
+//		System.out.println(asterix.getEffetPotion());
+//		System.out.println(minus.simuleCoup(asterix.getEffetPotion() * asterix.getForce() / 3));
+		asterix.frapper(minus);
+		while (!minus.simuleCoup(asterix.getEffetPotion() * asterix.getForce() / 3)) {
 			asterix.frapper(minus);
 		}
 	}

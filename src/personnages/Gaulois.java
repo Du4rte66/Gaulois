@@ -18,6 +18,10 @@ public class Gaulois {
 		return this.force;
 	}
 
+	public int getEffetPotion() {
+		return this.effetPotion;
+	}
+
 	public void parler(String texte) {
 		System.out.println(this.prendreParole() + "« " + texte + "»");
 	}
