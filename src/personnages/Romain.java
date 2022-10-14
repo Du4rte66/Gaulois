@@ -33,4 +33,8 @@ public class Romain {
 	public Boolean simuleCoup(int forceCoup) {
 		return force < forceCoup;
 	}
+	
+	public void voirGaulois() {
+		parler("UN GAU... UN GAUGAU...");
+	}
 }

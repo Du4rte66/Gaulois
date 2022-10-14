@@ -35,6 +35,10 @@ public class Gaulois {
 		return "Gaulois [nom=" + this.nom + ", force=" + this.force + ", effetPotion=" + this.effetPotion + "]";
 	}
 	
+	public void direBonjour() {
+		parler("Bonjour à tous !");
+	}
+	
 //	public static void main(String[] args) {
 //		Gaulois asterix = new Gaulois("Astérix", 8);
 //		System.out.println(asterix);
