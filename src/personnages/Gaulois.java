@@ -11,37 +11,38 @@ public class Gaulois {
 	}
 
 	public String getNom() {
-		return nom;
+		return this.nom;
 	}
-	
+
 	public int getForce() {
-		return force;
+		return this.force;
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(this.prendreParole() + "« " + texte + "»");
 	}
 
 	private String prendreParole() {
-		return "Le gaulois " + nom + " : ";
+		return "Le gaulois " + this.nom + " : ";
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3);
+		System.out.println(this.nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		romain.recevoirCoup(this.force / 3);
 	}
-	
+
+	@Override
 	public String toString() {
 		return "Gaulois [nom=" + this.nom + ", force=" + this.force + ", effetPotion=" + this.effetPotion + "]";
 	}
-	
+
 	public void direBonjour() {
-		parler("Bonjour à tous !");
+		this.parler("Bonjour à tous !");
 	}
-	
+
 //	public static void main(String[] args) {
 //		Gaulois asterix = new Gaulois("Astérix", 8);
 //		System.out.println(asterix);
 //	}
-		
+
 }

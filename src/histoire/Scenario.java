@@ -1,7 +1,7 @@
 package histoire;
 
-import personnages.*;
-
+import personnages.Gaulois;
+import personnages.Romain;
 
 public class Scenario {
 
@@ -10,8 +10,8 @@ public class Scenario {
 		Romain minus = new Romain("Minus", 6);
 		asterix.direBonjour();
 		minus.voirGaulois();
-		while (!minus.simuleCoup(asterix.getForce()/3)) {
-			//System.out.println(minus.simuleCoup(asterix.getForce()/3));
+		while (!minus.simuleCoup(asterix.getForce() / 3)) {
+			// System.out.println(minus.simuleCoup(asterix.getForce()/3));
 			asterix.frapper(minus);
 		}
 	}

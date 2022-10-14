@@ -3,38 +3,38 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
-	
+
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 	}
-	
+
 	public String getNom() {
-		return nom;
+		return this.nom;
 	}
-	
+
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(this.prendreParole() + "« " + texte + "»");
 	}
 
 	private String prendreParole() {
-		return "Le romain " + nom + " : ";
+		return "Le romain " + this.nom + " : ";
 	}
-	
+
 	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
-		if (force > 0) {
-			parler("Aïe");
+		this.force -= forceCoup;
+		if (this.force > 0) {
+			this.parler("Aïe");
 		} else {
-			parler("J'abandonne...");
+			this.parler("J'abandonne...");
 		}
 	}
-	
+
 	public Boolean simuleCoup(int forceCoup) {
-		return force < forceCoup;
+		return this.force < forceCoup;
 	}
-	
+
 	public void voirGaulois() {
-		parler("UN GAU... UN GAUGAU...");
+		this.parler("UN GAU... UN GAUGAU...");
 	}
 }
