@@ -13,6 +13,10 @@ public class Gaulois {
 	public String getNom() {
 		return nom;
 	}
+	
+	public int getForce() {
+		return force;
+	}
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
@@ -27,14 +31,13 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 	
-//	@Override
-//	public String toString() {
-//		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-//	}
-
-	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Astérix", 8);
-		
-		System.out.println(asterix.getNom());
+	public String toString() {
+		return "Gaulois [nom=" + this.nom + ", force=" + this.force + ", effetPotion=" + this.effetPotion + "]";
 	}
+	
+//	public static void main(String[] args) {
+//		Gaulois asterix = new Gaulois("Astérix", 8);
+//		System.out.println(asterix);
+//	}
+		
 }

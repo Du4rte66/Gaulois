@@ -29,4 +29,13 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
+	
+	public Boolean compteCoup(int forceCoup) {
+		force -= forceCoup;
+		if (force > 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 }
