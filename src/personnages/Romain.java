@@ -30,12 +30,7 @@ public class Romain {
 		}
 	}
 	
-	public Boolean compteCoup(int forceCoup) {
-		force -= forceCoup;
-		if (force > 0) {
-			return false;
-		} else {
-			return true;
-		}
+	public Boolean simuleCoup(int forceCoup) {
+		return force < forceCoup;
 	}
 }
