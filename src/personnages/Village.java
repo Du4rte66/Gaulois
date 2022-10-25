@@ -16,6 +16,4 @@ public class Village {
 	public void setChef(Chef chef) {
 		this.chef = chef;
 	}
-	
-
 }
