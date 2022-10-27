@@ -5,6 +5,7 @@ public class Romain {
 	private int force;
 
 	public Romain(String nom, int force) {
+		assert force >= 0 : "La force d’un Romain est toujours positive";
 		this.nom = nom;
 		this.force = force;
 	}
@@ -22,12 +23,15 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert this.force >= 0 : "La force d’un Romain est toujours positive";
+		int forceDepart = this.force;
 		this.force -= forceCoup;
 		if (this.force > 0) {
 			this.parler("Aïe");
 		} else {
 			this.parler("J'abandonne...");
 		}
+		assert this.force < forceDepart : "La force d’un Romain a diminué";
 	}
 
 	public Boolean simuleCoup(int forceCoup) {
@@ -36,5 +40,13 @@ public class Romain {
 
 	public void voirGaulois() {
 		this.parler("UN GAU... UN GAUGAU...");
+
 	}
+
+	public static void main(String[] args) {
+		Equipement test = Equipement.CASQUE;
+		System.out.println(test);
+
+	}
+
 }
