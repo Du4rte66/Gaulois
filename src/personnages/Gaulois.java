@@ -32,19 +32,13 @@ public class Gaulois {
 		return "Le gaulois " + this.nom + " : ";
 	}
 
-//	public void frapper(Romain romain) {
-//		System.out.println(this.nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-//		romain.recevoirCoup(this.effetPotion * this.force / 3);
-//	}
-	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		Equipement[] trophees = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++) {
-			this.trophees[nbTrophees] = trophees[i];
+		System.out.println(this.nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		Equipement[] trophees = romain.recevoirCoup((this.force / 3) * this.effetPotion);
+		for (int i = 0; trophees != null && i < trophees.length; i++, this.nbTrophees++) {
+			this.trophees[this.nbTrophees] = trophees[i];
 		}
 	}
-
 
 	@Override
 	public String toString() {
